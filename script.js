@@ -5,11 +5,9 @@ function Fetch() {
         .then((response) => {
         return response.json();
     })
-    .then(response => {
-        response.json().then((data)=> {
+    .then(data => {
 
             document.getElementById("time").innerText = data.hour + ":" + data.minute + ":" + data.seconds
-        });
         
     }). catch(error => {
         console.log(error);
